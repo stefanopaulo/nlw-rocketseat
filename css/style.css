@@ -29,3 +29,7 @@ input {
     border: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+
+li {
+    list-style: none;
+}
