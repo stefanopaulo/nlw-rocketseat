@@ -23,3 +23,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
     font-family: 'Ubuntu', sans-serif;
 }
+
+input {
+    outline: none;
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
