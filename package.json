@@ -1,20 +1,26 @@
 {
   "name": "nlw-rocketseat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Projeto prático da Rocketseat - NLW",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stefanopaulo/nwl-rocketseat.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Stefano Paulo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stefanopaulo/nwl-rocketseat/issues"
   },
-  "homepage": "https://github.com/stefanopaulo/nwl-rocketseat#readme"
+  "homepage": "https://github.com/stefanopaulo/nwl-rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
