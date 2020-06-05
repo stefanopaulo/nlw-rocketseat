@@ -71,8 +71,16 @@ server.post("/savepoint", (req, res) => {
 })
 
 server.get("/search", (req, res) => {
+    const search = req.query.search
+
+    if(search == "") {
+        // pesquisa vazia
+        // mostrar a página com os dados do banco de dados
+        return res.render("search-results.html", { total: 0 })
+    }
+
     // pegar os dados do banco de dados
-    db.all(`SELECT * FROM places`, function(err, rows) {
+    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
         if(err) {
             return console.log(err)
         }
@@ -82,6 +90,7 @@ server.get("/search", (req, res) => {
         // mostrar a página com os dados do banco de dados
         return res.render("search-results.html", { places: rows, total })
     })
+
 })
 
 // ligar o servidor
