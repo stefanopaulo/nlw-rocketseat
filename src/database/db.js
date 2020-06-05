@@ -52,9 +52,17 @@ db.serialize(() => {
         console.log(this)
     }
 
-    db.run(query, values, afterInsertData)
+    // db.run(query, values, afterInsertData)
 
     // consultar os dados da tabela
+    // db.all(`SELECT * FROM places`, function(err, rows) {
+    //     if(err) {
+    //         return console.log(err)
+    //     }
+
+    //     console.log("Aqui estão seus registros: ")
+    //     console.log(rows)
+    // })
 
     // deletar dados da tabela
 })
